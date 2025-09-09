@@ -1,12 +1,12 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import GestorDados from './dados/GestorDados';
-import Produto from './dados/Produto';
+import Aluno from './dados/Aluno';
 import { styles } from './CommonStyles';
 
 const Home = () => {
   const [isLoading, setLoading] = useState(true);
-  const [data, setData] = useState<Produto[]>([]);
+  const [data, setData] = useState<Aluno[]>([]);
 
  const getData = async () => {
   try {
@@ -37,7 +37,8 @@ const Home = () => {
               <Fragment key={item._id}>
                 <Text>{item._id || ''}</Text>
                 <Text style={styles.textItem}>{item.nome}</Text>
-                <Text>{item?.quantidade}</Text>
+                <Text>{item?.turma}</Text>
+                 <Text>{item?.pago}</Text>
               </Fragment>
             )}
           />
@@ -46,7 +47,7 @@ const Home = () => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          const novoProduto = { _id: 5, nome: 'Ciriguela', quantidade: 25 };
+          const novoProduto = { _id: 5, nome: 'Ciriguela', turma: 'A1', pago: true };
           new GestorDados()
             .adicionar(novoProduto)
             .then(() => console.log('Produto adicionado:'))

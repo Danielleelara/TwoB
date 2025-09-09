@@ -1,17 +1,17 @@
-import  Produto  from './Produto';
+import  Aluno  from './Aluno';
  import api from '../api';
 
  class GestorDados {
      public async remover(chave: string){
      await api.delete('/remove/'+chave);
      }
-     public async adicionar(produto: Produto){
-     await api.post('/new', produto);
+     public async adicionar(aluno: Aluno){
+     await api.post('/new', aluno);
      }
-    public async editar(produto: Produto) {
-    await api.put(`/edit/${produto._id}`, produto);
+    public async editar(aluno: Aluno) {
+    await api.put(`/edit/${aluno._id}`, aluno);
 }
-    public async obterTodos(): Promise<Produto[]>{
+    public async obterTodos(): Promise<Aluno[]>{
     const resposta = await api.get('/');
     return resposta.data;
     }

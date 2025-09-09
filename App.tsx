@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 import { FlatList, StatusBar, Text, useColorScheme, View } from 'react-native';
 import { styles } from './CommonStyles';
 import GestorDados from './dados/GestorDados';
-import Produto from './dados/Produto';
+import Produto from './dados/Aluno';
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
           <View style={styles.itemsContainer}>
             <Text >{item._id}</Text>
             <Text >{item.nome}</Text>
-            <Text >{item.quantidade}</Text>
+            <Text >{item.turma}</Text>
           </View>
         )}  
       />
