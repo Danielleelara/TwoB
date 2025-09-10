@@ -43,8 +43,7 @@ export const styles = StyleSheet.create({
   },
 
   button: {
-    marginTop: 10,
-    marginBottom: 10,
+    margin: 20,
     height: 60,
     backgroundColor: 'blue',
     borderRadius: 10,
@@ -61,7 +60,22 @@ export const styles = StyleSheet.create({
 
   buttonTextBig: { color: '#fff', fontWeight: 'bold', fontSize: 24 },
 
-  textItem: { fontSize: 20 },
+   item: {
+    margin: 10,
+    padding: 6,
+    minHeight: 60,
+    backgroundColor: 'blue',
+    borderRadius: 10,
+    paddingHorizontal: 24,
+    fontSize: 16,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  },
+
+  textItem: { 
+    fontSize: 20,
+      color: '#fff',
+   },
 
   deleteButton: {
     marginLeft: 10,
@@ -75,5 +89,26 @@ export const styles = StyleSheet.create({
     shadowOpacity: 10,
     shadowColor: '#ccc',
     alignItems: 'center',
+  },
+
+  modalContainer: {
+
+  },
+
+  modalTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+
+  modalValue: {
+    fontSize: 20,
+    marginBottom: 10,
+  },
+
+  modalLabel: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 10,
   },
 });
